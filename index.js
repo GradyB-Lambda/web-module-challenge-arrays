@@ -41,15 +41,16 @@ With all of these changes going on, we don't want to lose track of the actual, o
 
 /*
 Use the copy function below to do the following:
-    1. Receive two arguments: one for your new array and one for your original array
+    1. Receive one argument: for your new array and one for your original array
     2. Return the new array that holds an exact copy of the old array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
+function copy(arr){
+    return [...arr];
+}
 
-
+const copyCat = copy(originalFlavors)
+console.log(copyCat);//now we have the copy 
 
 
 
@@ -65,8 +66,11 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(/*your code here*/){
-   /*your code here*/
+    if(.length === 31){
+        console.log(true)
+    }else{console.log(false)}
 }
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
