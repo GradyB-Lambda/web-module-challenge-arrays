@@ -87,11 +87,12 @@ Use the addFlavor function below to do the following:
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
+function addFlavor(arr, newFlavor){
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
-
+     arr.unshift(newFlavor);
+     return arr
+ }
+console.log(addFlavor(originalFlavors,'Rainbow Sherbert'))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
