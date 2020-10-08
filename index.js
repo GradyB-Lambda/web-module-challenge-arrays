@@ -105,9 +105,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(arr){
+    arr.pop();
+    return arr
 }
+console.log(removeLastFlavor(originalFlavors))
 
 
 
@@ -121,9 +123,15 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(arr,index){
+    for( let i = 0; i < arr.length; i++){
+        if(arr[i].includes(arr[i])){
+            return arr[i];
+        }
+    }
+
 }
+console.log(getFlavorByIndex(originalFlavors,originalFlavors[2]))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -140,15 +148,20 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+
+function removeFlavorByName(arr, flavor) {
+    const removed = arr.indexOf(flavor);
+    arr.splice(removed, 1)
+    return arr;
 }
+console.log(removeFlavorByName(originalFlavors, "Coffee"))
+
 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
-Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
+Your task is to write a function that **checks every item** in the array for a **string** and **returns a new array called **filteredArray** with only the values 
 that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around 
 by passing in those specific strings.
 
@@ -165,7 +178,7 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
+function filterByWord(arr,promotion){
     /*your code here*/
 }
 
